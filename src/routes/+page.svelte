@@ -1,4 +1,5 @@
 <script lang='ts'>
+  import { base } from '$app/paths';
   import Navbar from "../Navbar.svelte";
   import NeomorphicButton from "../NeomorphicButton.svelte";
 
