@@ -22,7 +22,7 @@ on:mouseleave={() => (isPressed = false)}>
 
 /* Pressing animation */
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.90);
     box-shadow: inset 8px 8px 16px #d1d9e6, inset -8px -8px 16px #ffffff;
 }
 
