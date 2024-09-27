@@ -1,29 +1,35 @@
-<section id="contact" class="pt-[10vh]"> <!-- Responsive padding -->
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
-      <p class="text-lg text-gray-600 text-center mb-8">
-        Have questions or want to get in touch? Fill out the form below, and we'll get back to you as soon as possible.
-      </p>
-  
-      <form class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
-        <div class="mb-6">
-          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-          <input id="name" type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" placeholder="Your Name" />
-        </div>
-        <div class="mb-6">
-          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-          <input id="email" type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" placeholder="Your Email" />
-        </div>
-        <div class="mb-6">
-          <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-          <textarea id="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" rows="4" placeholder="Your Message"></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-500 transition-all duration-200">
-            Send Message
-          </button>
-        </div>
-      </form>
+<script>
+  import Team from "./Team.svelte";
+
+  export let logoSrc = "cyberscape_black.png";
+  export let contact = {
+    email: 'kontakt@cyberscape.at',
+    address: 'HTL Rennweg, Rennweg 89b, 1030 Wien',
+  };
+</script>
+
+<div class="pt-[10vh]">
+  <div id="contact" class="bg-white shadow-neumorphic flex justify-between items-center">
+    <div class="flex flex-col w-full md:w-1/2 pl-20 p-6">
+      <h2 class="text-xl font-bold mb-2">Kontakt Informationen</h2>
+      <p class="text-gray-600 mb-1">Email: <a href="mailto:{contact.email}" class="text-blue-500">{contact.email}</a></p>
+      <p class="text-gray-600 mb-1">Adresse: <a href="www.htlrennweg.at">{contact.address}</a></p>
+
+    </div >
+    
+     <div class="pr-20  p-6">
+      <img src="{logoSrc}" alt="Logo" class="w-24 h-auto ml-4" />
     </div>
-  </section>
-  
+    
+  </div>
+</div>
+
+<style>
+  /* Neomorphic shadow for white design */
+  .shadow-neumorphic {
+      box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.1), 
+                  -4px -4px 10px rgba(255, 255, 255, 0.9);
+      background: linear-gradient(135deg, rgba(0,0,255,0.1), rgba(255,255,255,1));
+      backdrop-filter: blur(10px);
+  }
+</style>

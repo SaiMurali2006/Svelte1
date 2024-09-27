@@ -1,12 +1,14 @@
 <script lang='ts'>
   import Navbar from "../Navbar.svelte";
   import NeomorphicButton from "../NeomorphicButton.svelte";
-  const navLinks = {
-    'Project': '#project',
-    'Team': '#team',
-    'Contact': '#contact'
-  };
-  const favicon = "cyberscape.png";
+
+
+  const navItems = {
+        "Project": { sectionID: '#project', icon: "project.png" },
+        "Team": { sectionID: '#team', icon: "team.png" },
+        "Contact": { sectionID: '#contact', icon: "contact.png" },
+    };
+  const favicon = "cyberscape_black.png";
 
   import Contact from "../Contact.svelte";
   import Project from "../Project.svelte";
@@ -14,7 +16,7 @@
 </script>
 
 
-<Navbar navItems={navLinks} favicon={favicon} />
+<Navbar navItems={navItems} favicon={favicon} />
 
 
 <Project></Project>
