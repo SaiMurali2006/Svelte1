@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
     // Props: dictionary of items where the key is the name and the value is the section ID
     export let navItems = {};
     import NeumorphicButton from '../src/NeomorphicButton.svelte';
@@ -6,17 +6,22 @@
     // Path to the favicon
     export let favicon = "favicon.png";
 
-    function scrollToSection(sectionID) {
+    function scrollToSection(sectionID: string) {
+        console.log(sectionID)
         const section = document.querySelector(sectionID);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
+
     }
+
+
 
 
   </script>
   
-  <nav class="bg-white p-4 rounded-xl shadow-neumorphic">
+<nav class="bg-white p-4 shadow-neumorphic sticky top-0 z-50 ">
+    
     <div class="container mx-auto flex justify-between items-center">
         <!-- Favicon / Logo -->
         <div>
@@ -37,7 +42,7 @@
 
         </ul>
     </div>
-  </nav>
+</nav>
   
   <style>
     /* Neomorphic shadow for white design */
