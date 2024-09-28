@@ -13,7 +13,7 @@
     <div class="flex flex-col w-full md:w-1/2 pl-20 p-6">
       <h2 class="text-xl font-bold mb-2">Kontakt Informationen</h2>
       <p class="text-gray-600 mb-1">Email: <a href="mailto:{contact.email}" class="text-blue-500">{contact.email}</a></p>
-      <p class="text-gray-600 mb-1">Adresse: <a href="www.htlrennweg.at">{contact.address}</a></p>
+      <p class="text-gray-600 mb-1">Adresse: <a href="https://www.htlrennweg.at">{contact.address}</a></p>
 
     </div >
     

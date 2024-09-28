@@ -22,7 +22,7 @@
         box-shadow: 8px 8px 16px #d1d9e6,
         -8px -8px 16px #ffffff;
         background: linear-gradient(135deg, rgba(0,0,255,0.06), rgba(255,255,255,1));
-        backdrop-filter: blur(10px);
+        
         
     }
 
