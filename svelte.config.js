@@ -10,7 +10,7 @@ const config = {
       fallback: 'index.html',
     }),
     paths: {
-      base: '' // Set this to an empty string for root hosting
+      base: '/../build' // Set this to an empty string for root hosting
     }
   }
 };
